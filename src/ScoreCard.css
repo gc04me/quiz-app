@@ -1,0 +1,49 @@
+.scorecard{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    border: 3px solid #c6c6c6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 700px) {
+    .scorecard{
+        width: 70%;
+        height: 70%;
+}}
+
+.scorecard__header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.scorecard__content{
+    display: flex;
+}
+
+.scorecard__left__content>p{
+    padding: 15px;
+    color: white;
+}
+
+.scorecard__left__content>p.pass{
+    color:green;
+    font-weight: bold;
+}
+
+.scorecard__left__content>p.fail{
+    color:red;
+    font-weight: bold;
+}

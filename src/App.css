@@ -1,0 +1,111 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+ }
+
+.app {
+  position: relative;
+  margin: 10px;
+  background-image:linear-gradient(to right bottom, rgba(52,73,85, 0.9), rgba(52,73,85, 0.9)),url('img.png');
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+}
+
+.app__intro{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 700px) {
+  .app__intro{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}}
+
+.app__intro__text{
+    color:white;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 700px) {
+  .app__intro__text{
+    color:white;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    font-size: 15px;
+}}
+
+.app__intro__button, .app__intro__button:visited {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  transition: all 0.3s;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 700px) {
+  .app__intro__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    transition: all 0.3s;
+    border-radius: 100px;
+    font-weight: bold;
+    height: 30px;
+}}
+
+.app__intro__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.app__intro__button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+
+@keyframes moveInRight{
+  0%{
+      opacity: 0;
+      transform: translateX(100px);
+  }
+  50%{
+      opacity: 0.5;
+      transform: translateX(-30px);
+  }
+
+  100%{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
